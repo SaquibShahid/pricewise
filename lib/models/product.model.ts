@@ -6,6 +6,10 @@ const productSchema = new mongoose.Schema({
         required : true,
         unique : true
     },
+    title : {
+        type : String,
+        required : true,
+    },
     currency : {
         type : String,
         required : true,
@@ -45,5 +49,5 @@ const productSchema = new mongoose.Schema({
     timestamps : true
 })
 
-const Product = mongoose.models.Product || mongoose.model("Product" , productSchema) ;
+const Product = mongoose.model("products" , productSchema) ;
 export default Product;
